@@ -1,0 +1,65 @@
+*{
+   background-color: rgb(226, 219, 211);
+}
+
+
+/* video 1 */
+#sample ::after{
+   content: "after content";
+}
+
+/* #sample::before{
+   content: "before content";
+   color: brown;
+} */
+#sample::first-line {
+   text-decoration: dotted;
+   background-color: yellow;
+}
+#sample::first-letter {
+   text-decoration: dotted;
+   background-color: rgb(76, 0, 255);
+}
+
+input::placeholder{
+   background: #8a19db;
+   color: chartreuse ;
+   text-decoration: underline;
+}
+input:focus{
+   color: rgb(0, 255, 136);
+}
+
+/* video 2 */
+a{
+   background-color: beige;
+   border: 2px dotted palegreen;
+   font-size: xx-large;
+   /* cursor: pointer; */
+}
+
+a:visited {
+   color: rgb(255, 0, 0);
+}
+a:hover {
+   color: rgb(38, 4, 143);
+}
+a:focus {
+   color: rgb(42, 165, 46);
+}
+
+/* video 2 again */
+#video-2{
+   font-size: x-large;
+}
+p:first-child {
+   /* applies to first child  */
+   color: aquamarine;
+}
+p:last-child {
+   /* if last child as p exist then it willbe applied */
+   color: blueviolet;
+}
+p:nth-child(3){
+   color: rgb(167, 8, 8);
+}

@@ -1,0 +1,65 @@
+html{
+   box-sizing: content-box;
+}
+*{
+   box-sizing: inherit;
+}
+#parent{
+   display: grid ;  /*makes the parent container grid */
+
+   background-color: cadetblue;
+   border: 2px solid red;
+  
+   grid-column-gap: 30px;
+   grid-row-gap: 20px;
+   grid-template-columns: 100px 100px 100px;
+   grid-template-rows: repeat(3,120px);
+   height: 500px;
+
+
+
+   /* align-items: stretch;                 controls allignment inside grid item vertically */
+
+   align-content:space-around;         /* controls how items in a container are arranged  vertically  */
+
+   justify-content: space-evenly;      /* controls how items in a container are arranged horizontally */
+
+     /*    place-content: start end ;        short hand for align content  and justify content */
+       
+   /* justify-items: stretch;                controls allignment inside grid item horizontally  */
+
+   place-items: stretch stretch;          /*  short hand for align items  and justify items */
+       
+
+   
+   /* grid-template-columns: minmax(20px , 100px) 2fr  1fr;
+   grid-template-rows: repeat(3,100px); */
+
+   /* grid-template-areas: "box1  box2 box3 " 
+                        "box4  box5 box6 "
+                        "box7  box8 box9 "   ; */
+
+   padding: 12px;
+   width: 400px;
+}
+
+.child {
+   background-color: brown;
+
+   border:1px solid black ;
+   font-weight: bold;
+   padding: 5pxpx;
+   text-align: center;
+}
+/* .box1{
+   background-color: aqua;
+   grid-area: box1;
+}
+.box2{
+   background-color: burlywood;
+   grid-area: box2;
+}
+.box3{
+   background-color: beige;
+   grid-area: box3;
+} */

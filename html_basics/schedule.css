@@ -1,0 +1,24 @@
+.table2{
+   background-color: rgb(255, 255, 255);
+   /* border:  2px salmon solid; */
+   justify-content: space-between;
+   
+   /* color: rgb(240, 163, 163); */
+   margin: 3px;
+   width:100%;
+   height: 100%;
+   text-align: center;
+}
+.table1{
+   background-color: rgb(242, 238, 238);
+   justify-content: center;
+   margin: 3px;
+   width:100%;
+   height: 100%;
+   font-size: 25px  ;
+   
+}
+.tr{
+   padding: 10px;
+}
+

@@ -1,0 +1,94 @@
+/* #rotate {
+   /* transform: rotate(20deg);
+   /* transform: rotateY('angle'); */
+
+/* transform: translate(50px,40px);  /*  horizontal ,vertical */
+/* transform: scale(3); 
+      transform: skew(20deg); */
+
+/* transform: matrix(1,1,1,0,1,1); */
+
+/* transform: scale(3) rotate(30deg) skew(20deg) translate(100px,30px); 
+
+   background-color: #ff0000;
+   margin-left: 100px;
+   height: 100px;
+   width: 100px;
+
+} */
+
+/* until transform  */
+
+/* now transition */
+/* #rotate {
+   background-color: #0d00ff;
+   margin-left: 100px;
+   height: 100px;
+   width: 100px;
+
+    /*transition-property: background-color;
+   transition-duration: 4s;
+   transition-delay: 2ms;
+   transition-timing-function: ease-in; 
+
+   transition: background-color 3s ease-in 0.5ms;
+
+}*/
+
+/*#rotate:hover {
+   background-color: rgb(255, 0, 0);
+}
+ #transition1 {
+   background-color: #ff00ee;
+   margin-left: 100px;
+   margin-top: 300px;
+   height: 100px;
+   width: 100px;
+
+   transition: background-color 4s ease-out 0.5ms ,width 4s ease-out 0.5ms ,height 4s ease-out 0.5ms ;
+   
+}
+#transition1:hover {
+   background-color: rgb(234, 255, 0);
+   height: 150px;
+   width: 150px;
+} */
+
+/* until now transition */
+
+/* video 4 m27-1st May 2024 */
+/* filter */
+
+#rotate {
+  background-color: rgb(234, 255, 0);
+  margin-left: 200px;
+  margin-top: 200px;
+  height: 150px;
+  width: 150px;
+}
+
+#rotate:hover {
+  animation-name: widthandcolor;
+  animation-delay: 3ms;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+  /* animation-iteration-count: infinite; */
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+@keyframes widthandcolor {
+  0% {
+    background-color: rgb(255, 0, 0);
+    width: 100px;
+  }
+
+  50% {
+    background-color: black;
+  }
+
+  100% {
+    background-color: aqua;
+    width: 250px;
+  }
+}

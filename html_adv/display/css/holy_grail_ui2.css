@@ -1,0 +1,55 @@
+#parent{
+   
+   background-color: aquamarine;
+   border: 1px solid greenyellow;
+   display: grid;
+
+   grid-template-columns: 1fr;
+   padding: 15px;
+
+   width: 600px;
+}
+
+.header {
+   
+   background-color: bisque;
+   
+   border: 1px solid black;
+   
+   text-align: center;
+}
+
+.footer {
+   
+   background-color: darkgoldenrod;
+   
+   border: 1px solid black;
+   
+   text-align: center;
+}
+.menu {
+   
+   background-color: darkseagreen;
+   border: 1px solid black;
+   font-size: small;
+}
+
+.ads {
+   
+   background-color: cyan;
+   border: 1px solid black;
+   font-size: small;
+   padding: 25px;
+}
+.content {
+
+   /* background-color: cyan; */
+   border: 1px solid black;
+   font-size: small;
+   padding: 10px;
+   text-align: center;
+}
+.middle {
+   display: grid;
+   grid-template-columns: 1fr 4fr 1.2fr;
+}

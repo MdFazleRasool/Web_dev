@@ -1,0 +1,11 @@
+button{
+   background-color: rgb(204, 12, 12);
+   color: rgb(0, 0, 0);
+   margin-right: 10px;
+   font-size: larger;
+   
+}
+div{
+   display: flex;
+   gap: 20px;
+}

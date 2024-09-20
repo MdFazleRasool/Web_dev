@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <title>Ayushi-Developer portfolio</title>
+    <style>
+        * { 
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            list-style-type: none;
+            margin: 0 23px;
+            transform: transition 0.1s;
+        }
+        
+        .left {
+            font-size: 1.5rem;
+        }
+        
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 140px 0;
+            align-items: center;
+        }
+        
+        .firstsection>div {
+            width: 30%;
+        }
+        
+        .leftsection {
+            font-size: 3rem;
+        }
+        
+        .leftsection button {
+            color: white;
+            padding: 12px;
+            border: 2px solid white;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 6px;
+            background-color: rgb(18, 18, 62);
+            margin-top: 70px;
+            margin-left: 30px;
+        }
+        
+        .rightsection img {
+            width: 80%;
+            margin-top: 50px 0;
+        }
+        
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+        
+        .text-gray {
+            color: grey;
+        }
+        
+        #element {
+            color: rgb(170, 107, 228);
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.5cm;
+        }
+        
+        nav ul li a:hover {
+            color: rgb(170, 107, 228);
+            font-size: 1.01rem;
+        }
+        
+        main hr {
+            border: 0;
+            margin: 40px 84px;
+            height: 1.2px;
+            background: rgb(211, 21, 211);
+        }
+        
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            font-size: 1.2rem;
+        }
+        
+        .aboutme {
+            font-size: 0.6cm;
+            margin: 10px;
+            padding: 15px;
+        }
+        
+        .heading1 {
+            text-align: center;
+            color: rgb(170, 107, 228);
+            padding: 10px;
+            text-decoration: underline;
+        }
+        
+        .para {
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        .icons i {
+            padding-top: 20px;
+            margin: 70px;
+            display: flex;
+            flex-direction: center;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            gap: 2.5px;
+            margin-left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="left">Ayushi's portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li>
+                        <a href="#About">About</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">portfolio</a>
+                    </li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="left-container">
+    </div>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection" id="portfolio">Hi, My Name is<span class="purple">Ayushi</span>
+                <div>And I am a passionate</div>
+
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="image.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <!-- <span class="text-gray">what i have done so far</span>
+            <h1>Past Experiences</h1> -->
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer'],
+            typeSpeed: 50,
+        });
+    </script>
+
+    <div id="About" class="aboutme">
+        <h2 class="heading1">About me</h2>
+        <div class="para">"I'm a second-year BTech CSE student driven by a passion for technology and innovation. With a solid foundation in computer science principles, I thrive on exploring emerging technologies like Web development. Through hands-on projects and collaborative
+            problem-solving, I'm shaping my identity as a future leader in the field, driven by curiosity and a desire to make a meaningful impact through technology." i am so passionate to my work.I am excited to continue learning and growing as I embark
+            on my career in the Btech industry.</div>
+        <h2 class="heading1">Interests</h2>
+        <div class="para">I like watching horror movies.i love to explore new places. "Cultivating a passion for cutting-edge technologies like Web development, I'm driven by the potential to innovate and positively impact society. I'm committed to continuous learning
+            and contributing to the forefront of technology."</div>
+        <h2 class="heading1">Skills</h2>
+        <div class="para">"I possess a diverse set of skills that span technical expertise, data analysis, project management, communication, and problem-solving. My technical proficiency includes languages such as Python, Java . tools such as Tableau. Effective communication
+            is one of my strengths, demonstrated through clear presentations to stakeholders and collaborative work with multidisciplinary teams. Additionally, my problem-solving abilities enable me to identify and resolve technical challenges efficiently,
+            adapting to changing project requirements with innovative solutions. Overall, my skills make me a versatile and valuable asset in various professional settings." </div>
+
+        <div id="Contact" class="mycontact">
+            <h2 class="heading1">Contact me</h2>
+            <div class="para">Gmail - guptaayushi9693@mail.com</div>
+            <div class="para">Contact No. - 9693186733</div>
+        </div>
+    </div>
+    <div class="icons">
+        <i class="fab fa-instagram fa-3x"></i>
+        <i class=" fab fa-linkedin fa-3x "></i>
+        <i class="fab fa-facebook fa-3x "></i>
+        <i class="fab fa-twitter  fa-3x "></i>
+
+    </div>
+
+</body>
+
+</html>

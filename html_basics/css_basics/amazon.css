@@ -1,0 +1,35 @@
+body{
+   text-align: center;
+}
+#amazon{
+   color: black;
+   font-size:30px ;
+   font-weight: bolder;
+   font-style: unset;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.form{
+  border: 1px solid   black ;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  
+  
+}
+
+#continue{
+   width: 150px;
+   color: black;
+   background-color: yellow;
+}
+
+span{
+   color: rgb(84, 89, 217);
+   padding: 0px 20px;
+  
+}
+#span{
+   color: rgb(84, 89, 217);
+   padding: 0px 20px;
+   text-decoration: underline;
+}

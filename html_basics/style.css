@@ -1,0 +1,60 @@
+*{
+  background-color: rgb(106, 108, 108);
+  box-sizing: content-box;
+}
+/* body{
+  background-image: url(https://st4.depositphotos.com/1008648/21376/i/380/depositphotos_213763864-stock-photo-colorful-blue-abstract-light-effect.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} */
+h1 {
+  color: green;
+  text-decoration: underline;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 10px;
+  
+}
+h2{
+  color: red;
+  text-decoration: none;
+  background-color: rgb(6, 4, 3);
+  text-align: left;
+  text-transform: capitalize;
+  word-spacing: 15px;
+}
+h3{
+  font-size: 24px;
+  text-transform: capitalize;
+  text-indent: 50px;
+}
+.heading {
+  color: orange;
+}
+#middle,p {
+  color: aqua;
+  font-size: 30px;
+}
+#div1{
+  border: solid rgb(234, 71, 71) 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+  width: 400px;
+  height: 50px;
+}
+#div2{
+  border: solid rgb(201, 65, 65) 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+  width: 400px;
+  height: 100px;
+}
+#div3{
+  border: solid rgb(199, 100, 100) 5px;
+  /* color: rgb(210, 30, 30); */
+  padding: 10px;
+  margin-bottom: 5px;
+  width: 400px;
+  height: 100px;
+  box-sizing: border-box;
+}
