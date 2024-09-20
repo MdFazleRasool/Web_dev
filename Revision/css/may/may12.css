@@ -1,0 +1,111 @@
+:root {
+   /* global variable */
+   --blue:#1e99fd;
+}
+.container{
+   display: flex;
+}
+.test,.test1{
+   font-size: 3em;
+   width: 100px;
+   height: 100px;
+   background-color: var(--blue);
+   transition: all  5s;
+   margin-right: 10px;
+}
+.test:hover{
+   font-size: 5em;
+   width: 200px;
+}
+.test1:hover{
+   width: 200px;
+}
+
+
+/* 16th may */
+
+.box{
+   background-color: chocolate;
+   width: 100px;
+   height: 100px;
+   /* transition-property:all ;
+   transition-duration: 1s;
+   transition-timing-function: ease-in;
+   transition-delay: 1ms; */
+   transition: all 1s ease-in-out 1ms ;
+   display: flex;
+   
+}
+.box:active{
+   background-color: chartreuse;
+   height: 200px;
+   width: 200px;
+}
+.img{
+   border: 3px solid salmon;
+   display: flex;
+   margin-top: 10px;
+   width: 100%;
+   
+}
+#img1{
+   width: 25%; 
+   filter: blur(1px);
+   margin-right: 2px;
+}
+#img2{
+   width: 25%;
+   filter: grayscale(0.8);
+   margin-right: 2px;
+}
+#img3{
+   width: 25%;
+   filter: brightness(0.1);
+   margin-right: 2px;
+}
+#img4{
+   width: 25%;
+   filter: drop-shadow(30px 20px 2px red ) ;
+   margin-right: 2px;
+}
+.container2{
+   background-color: salmon;
+   border: 2px solid black;
+   height: 100vh;
+   margin-top: 20px;
+   width: 100%;
+}
+.box1{
+   background-color: red;
+   border: 2px solid blue ;
+   border-radius: 40px;
+   margin: 20px;
+   height: 50px;
+   width: 200px;
+   position: relative;
+   animation-name: rig;
+   animation-duration: 10s;
+   /* animation-delay: 1ms; */
+   animation-timing-function: ease-in;
+   animation-iteration-count: infinite;
+}
+.box2{
+   background-color: red;
+   border: 2px solid blue ;
+   border-radius: 50%;
+   margin: 20px;
+   height: 50px;
+   width: 200px;
+   position: relative;
+   animation: rig 5s ease-in infinite 1ms alternate-reverse running;
+}
+@keyframes  rig{
+   from{
+      top:0;
+      left:0%;
+   }
+   to{
+      top:0; 
+      left: 75%;
+   }
+}

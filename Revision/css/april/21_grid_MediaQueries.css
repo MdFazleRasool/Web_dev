@@ -1,0 +1,80 @@
+.grid_container{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.items{
+   background-color: orange;
+   border: 1px solid lightgrey;
+   
+   height: 10vh;
+}
+.grid_container > div:nth-child(2){
+   grid-row-start: 2;
+   grid-row-end: 3;
+}
+.grid_container > div:nth-child(3){
+   /* grid-row-start: 2;
+   grid-row-end: 2; */
+   grid-row: 2/3; /* 2 pai start 3 par end  */
+   grid-column: 2/3; /* 2 pai start 3 par end  */
+} 
+
+#hr1{
+   background-color: rgb(33, 33, 34);
+   height: 10px;
+}
+
+/* <!-- 25 April Media Queries  --> */
+
+.media_container1{
+   background-color: rgb(222, 110, 110);
+   display: flex;
+}
+.item{
+   background-color: orange;
+   border: 1px solid rgb(0, 0, 0);
+   color: white;
+   height: 200px;
+   max-height: 200px;
+   min-width: 100px;
+   width: 100px;
+   
+}
+/* @media only screen and (min-width:600px) and (max-width:900px){
+   .media_container1{
+      background-color: black;
+      flex-direction: column;
+   }
+   .item{
+      background-color: hotpink;
+   }
+} */
+@media only screen and (max-width:600px) {
+   .media_container1{
+      background-color: black;
+      flex-direction: column;
+   }
+   .item{
+      background-color: hotpink;
+   }
+}
+ul{
+   background-color: rgb(255, 172, 18);
+   display: flex;
+   gap: 10px;
+   list-style: none;
+
+}
+ul > li {
+   cursor: pointer;
+   font-size: 2.5rem;
+   background-color: greenyellow;
+}
+@media only screen and (max-width:768px){
+   nav > ul {
+      flex-direction: column;
+   }
+   ul > li{
+      font-size: 1.5rem;
+   }
+}

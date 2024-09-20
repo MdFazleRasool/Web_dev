@@ -1,0 +1,195 @@
+/*.parent{
+
+
+   border: 3px solid blue;
+   height: 100px;
+   position: relative;
+
+}
+.child{
+   background-color: pink;
+   border: 3px solid rgb(255, 0, 119);
+   border-radius: 50%;
+
+   height: 25%;
+   padding: 10px;
+   position: absolute;
+   
+   top: -10px;
+   right: 6px;
+} */
+
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+/* .header{
+   border: 2px solid rgb(11, 10, 10);
+   position: fixed;
+   background-color: blueviolet;
+   font-size: xx-large;
+   width: 100%;
+} */
+ 
+/* .row{
+   align-items: center;
+   display: flex;
+   gap: 750px;
+   justify-content: center;
+   width: 100%;
+   
+}
+.column{
+   border: 1px solid red;
+   background-color: beige;
+   height: 100px;
+   width: 100px;
+}
+
+.column:nth-child(2n+1){
+   position:fixed;
+} */
+/* .sticky{
+   border: 1px solid red;
+   background-color: beige;
+   height: 100px;
+   margin-bottom: 50px;
+   position:sticky;
+   top:5px;
+   width: 100px;
+}
+.bg-img{
+   background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=400);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 50%;
+   width: 50%;
+   opacity: 0.1;
+   margin-left: 50%;
+   
+} 
+
+.virat{
+   border: 2px solid chocolate;
+   height: 100%;
+   font-size: 35px;
+   margin-left: 20px;
+   /* overflow: hidden;
+   white-space: wrap; 
+   height: 50%;
+   width: 50%;
+   opacity: 1;
+   margin-left: 50%;
+   
+}*/
+
+/* upto here was until 14 april */
+#april{
+   font-size: 25px;
+   margin-bottom: 50px;
+   color: blue;
+}
+/* 19 april  */
+
+/* .flex_container{
+   
+   border: 2px solid chocolate; 
+
+   display: flex;
+   flex-wrap: wrap;
+   gap: 50px;
+   justify-content: center;
+
+   padding: 10px;
+
+}
+
+.flex_container--item1{
+   background-color: green;
+
+   position: relative;
+   text-align: center;
+   height: 50px;
+   /* z-index: 1;
+}
+.flex_container--item2{
+ background-color: rgb(0, 107, 128);
+   position: relative;
+   text-align: center;
+   height: 50px;
+   bottom: 40px;
+}
+
+.flex_container--item3{
+     background-color: rgb(207, 43, 43);
+     position: relative;
+   text-align: center;
+   height: 50px;
+}
+.flex_container--item4{
+   background-color: violet;
+   position: relative;
+ 
+   text-align: center;
+   height: 50px;
+}
+.flex_container--item5{
+   background-color: yellow;
+   position: relative;
+   text-align: center;
+   height: 50px;
+}
+ */
+
+ /* 21 april */
+ .container{
+   border: 1px solid black;
+   background-color: aqua;
+   margin-left: 20px;
+   width: 50%;
+   height: 100px;
+ }
+ .inner{
+   border: 1px solid gray ;
+   background-color: blueviolet;
+   width: 50%;;
+   height: 50%;
+ }
+
+ header{
+   margin-top: 10px;
+   border: 1px solid black;
+   background-color: red;
+   color: wheat;
+   height: 10vh;
+   width: 20vw;
+ }
+ .container{
+   height: 50vh;
+   margin-top: 20px;
+   font-size: 25px ;
+ }
+ .Innerchild-1{
+   font-size: 2em;
+ }
+ .grand-child-1{
+   font-size: 1em;
+ }
+html{
+   font-size: 25px ;
+}
+ .container{
+   height: 50vh;
+   margin-top: 20px;
+   font-size: 25px ;
+ }
+ .Innerchild-1{
+   font-size: 2rem;
+ }
+ .grand-child-1{
+   font-size: 1rem;
+ }
+ 

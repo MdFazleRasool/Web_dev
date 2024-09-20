@@ -1,0 +1,133 @@
+.animation{
+   height: 100px;
+   width: 100px;
+   animation: transit 2s none;
+   position: relative;
+}
+@keyframes transit {
+   /* 0% {
+      background-color: red;
+      top: 0px;
+   }
+   25% {
+      background-color: rgb(0, 0, 0);
+      top: 150px;
+   }
+   50% {
+      background-color: rgb(255, 123, 0);
+      top: 300px;
+   }
+   100% {
+      background-color: red;
+      top: 450px;
+   } */
+   from{   /* 0% */
+      background-color: rgb(0, 0, 255);
+      color: aliceblue;
+      top: 10px;
+      left: 30px;
+   }
+   to{   /* 100% */
+      background-color: rgb(241, 14, 14);
+      left: 450px;
+      top: 10px;
+   }
+   
+}
+#button{
+   margin: 30px;
+}
+#button:hover{
+   animation: bounce 2s infinite;
+   color: aqua;
+   
+   
+}
+@keyframes bounce {
+   0%{
+      transform: scale(1.0);
+   }
+   100%{
+      
+      transform: translateX(20px)   scale(2.0);
+   }
+}
+.rocket{
+   position: relative;
+   animation: rocketlaunch 1s 1;
+   margin-left: 200px;
+}
+
+@keyframes rocketlaunch {
+   0%{
+      top: 300px;
+      
+
+   }
+   100%{
+      top: 10px;
+   }
+   
+}
+.car{
+   animation: car 4s 1 ;
+   background-color: black;
+   height: 150px;
+   overflow-x: hidden;
+   position: relative;
+
+   width: 100%;
+   
+}
+@keyframes car {
+   0%{
+      transform: translateX(0);
+   }
+   100%{
+      transform: translateX(-100px);
+   }
+}
+
+nav > ul {
+   background-color: orange;
+   cursor: pointer;
+   display: flex;
+   gap: 20px;
+   list-style-type: none;
+}
+.relative-home{
+   position: relative;
+}
+.Home-popup{
+   background-color: black;
+   color: white;
+   display: none;
+   height: 200px;
+   left: -20px;
+   position: absolute;
+   top: 20px;
+   width: 200px;
+   z-index: 99999;
+}
+.relative-home:hover .Home-popup {
+   display: inline-block;
+}
+
+.name{
+   background-color: orange;
+   color: white;
+   left: 0px;
+   height: 200px;
+   position: relative;
+   width: 200px;
+   
+}
+.name:hover{
+   background-color: black;
+   color: white;
+   height: 400px;
+   transition: all 5s;
+   width: 400px;
+   left: 200px;
+
+}

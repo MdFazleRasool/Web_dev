@@ -1,0 +1,94 @@
+.div1  p{
+   background-color: green;
+   font-size: 1.3em;
+}
+.div1 > p{
+   background-color: salmon;
+   font-size: 1.6em;
+   
+}
+.div2 h3{
+   color: salmon;
+}
+.div2 > h3{
+   color: rgb(76, 0, 255)
+}
+h2+h3{
+   background-color: black;
+   width: max-content;
+}
+/* not working */
+.div1::after{
+   content: attr("Rasool");
+   background-color: black;
+   color: rgb(255, 255, 255);
+}
+/* not working */
+.div2::before{
+   content: attr(md);
+   background-color: black;
+}
+
+.div3 P::first-letter{
+   color: chocolate;
+   font-size: 4em;
+}
+.div3 p::first-line{
+   background-color: black;
+   color: wheat;
+}
+/* not working */
+#input::placeholder{
+   color: crimson;
+   font-size: 2em;
+   
+}
+p::selection{
+   color: black;
+   background-color: hotpink;
+}
+/* not working */
+.div3 div31 h4::marker{
+   font-size: 2em;
+   color: rgb(255, 0, 0);
+   content: "xjxjopijx";
+}
+.div3 ul li::marker{
+   font-size: 2em;
+   color: blue
+}
+.div4 button:hover{
+   color: coral;
+   background-color: black;
+}
+.div4 button:active{
+   color: rgb(0, 21, 255);
+   background-color: black;
+}
+
+.div4 input:focus{
+   color: rgb(0, 21, 255);
+   background-color: black;
+}
+a:visited{
+   color: rgb(255, 0, 0);
+}
+a:link{
+   color: rgb(0, 0, 0);
+}  
+
+.div1 p:first-child{
+  color: wheat;
+}
+.div1 p:last-child{
+   color: wheat;
+}
+.div5{
+   display: flex;
+}
+.div5 input:checked+h4{
+   color: rgb(172, 255, 47);
+}
+.div5 input:not(checked)+h4{
+   color: rgb(255, 0, 0);
+}

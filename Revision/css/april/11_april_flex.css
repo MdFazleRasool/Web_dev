@@ -1,0 +1,77 @@
+.container{
+   border: 1px solid black;
+   height: 200px;
+   display: flex;
+   /* flex-direction: column;
+   align-items: start;  */
+   align-items: center; 
+   
+   justify-content: space-between;
+   /* width: 100%; */
+   flex-wrap: wrap;
+   
+}
+.btns{
+   flex-grow: 1;
+   flex-basis: 200px;
+}
+
+div > button:nth-child(odd){ 
+   /* margin-left: 10px; */
+   background-color: orange;
+}
+
+.parent-div{
+   
+   border: 3px solid chocolate;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 800px;
+   
+}
+.child-div{
+   border: 3px solid rgb(0, 0, 0);
+   background-color: rgb(255, 178, 122);
+   height: 200px;
+   
+   width: 200px;
+}
+.parent-div{
+   position: relative;
+
+   border: 3px solid yellowgreen;
+   height: 600px;
+   width: 100%;
+   
+}
+
+.child-div{
+   position: absolute;
+   background-color: deeppink;
+   border: 3px solid rgb(0, 0, 0);
+   height: 200px;
+   transform: translate(-50%,-50%);
+   top: 50%;
+   left: 50%;
+   width: 200px;
+
+}
+.flex-ul{
+   border: 2px solid black;
+   background-color: blueviolet;
+   color: bisque;
+   display: flex;
+
+   gap: 20px;
+
+   /* justify-content: end; */
+   /* align-items: center; */
+   /* height: 200px;*/
+} 
+
+.list-items{
+   text-decoration: none;
+   list-style: none;
+   cursor: pointer;
+}

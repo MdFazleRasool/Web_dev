@@ -1,0 +1,38 @@
+.parent{
+   background-color: pink;
+   padding: 10px;
+   /* position:sticky;
+   top: 20px;
+   bottom: 20px;  */
+   text-transform:capitalize ;
+   height: 800px;
+   width: 500px;
+}
+
+.child1{
+   background-color: red;
+   padding: 5px;
+   /* position:fixed;
+   top: 20px; 
+   bottom: 20px; */
+   position: sticky;
+   top: 2px;
+   
+}
+.child2{
+   background-color:blue;
+   padding: 5px;
+   
+}
+.child3{
+   background-color: yellow;
+   padding: 5px;
+
+   
+   
+}
+.child4{
+   background-color: green;
+   padding: 5px;
+   
+}

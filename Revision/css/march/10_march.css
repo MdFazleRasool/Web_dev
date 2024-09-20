@@ -1,0 +1,119 @@
+#click{
+   font-size: xx-large;
+   float: right;
+}
+/* universal selector */
+/* *{
+   color: red;
+} */
+
+#early{
+   color: blue;
+}
+#intro{
+   color: orange;
+}
+
+
+
+/* 31 march doubt-session */
+button{
+   width: 150px;
+}
+.borderRadius{
+   border-radius: 50px;
+   color: rgb(246, 187, 197);
+   width: 220px;
+}
+.button1:hover{
+   box-shadow: rgb(250, 250, 49) 5px 4px 12px;
+   width: 250px;
+}
+.button2:hover{
+   background-color: brown;
+   box-shadow: rgba(6, 24, 44, 0.9) 0px 0px 0px 2px ,rgba(6, 24, 44, 0.9) 8px 4px 6px 2px ;
+}
+/* button:nth-child(even){
+   background-color: bisque;
+}
+button:nth-child(odd){
+   background-color: aquamarine;
+}
+button:nth-child(2n){
+   font-size: large;
+} */
+p:nth-child(1){
+   background-color: coral;
+}
+
+/* Sudo Element */
+#btn::before{
+   content: "Sudo Element Used (before)   ";
+}
+
+#h5::after{
+   content: "Sudo Element Used (after)";
+}
+h4{
+   font-size: 25px;
+}
+h4::first-line{
+   
+   color: coral;
+   font-size: larger;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+p::first-line{
+   background-color: darkgray;
+   /* color: rgb(214, 255, 80); */
+   font-size: larger;
+}
+
+p span{
+   color: rgb(4, 32, 252);
+}
+::selection{
+   background-color: chartreuse;
+}
+ul li::marker{
+   color: blueviolet;
+   background-color: brown;
+   font-size: 15px;
+}
+
+/* combinators in css */
+.combinators > p{
+   color: darkgreen;
+}
+.combinators > p:nth-child(2) {
+   background-color: rgb(250, 20, 250);
+   color: rgb(0, 0, 0);
+}
+
+/* amazon login page */
+/* body{
+   text-align: center;
+} */
+
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+.amazon-signIn{
+   border: 1px solid lightgray;
+   width: 30%;
+}
+#email{
+   font-weight: bold;
+}
+#input{
+   width: 70%;
+   border: 1px solid rgb(55, 0, 255);
+}
+.btnsignIn{
+   background-color: orange;
+   border-radius: 60px;
+   color: rgb(0, 0, 0);
+   width: 150px;
+}
