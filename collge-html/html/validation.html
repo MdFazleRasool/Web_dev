@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Vaidation using JavaScript</title>
+</head>
+<body>
+    <script>
+
+        function validateForm(){
+            var name = document.forms["myform"]["name"].value;
+            var email = document.forms["myform"]["email"].value;
+            var message = "";
+
+            var nameRegex = /^[A-Za-z\s]+$/;
+
+            if(name.trim() === ""){
+                message += "Name must be filled out.\n";
+            }else if(!nameRegex.test(name) || name.trim().length === 0){ //test fn is used to check the regular expression
+                // trim removes the ending spaces
+                message += "Name can only conatin letters and spaces, and cannot be just spaces.\n";
+            }
+
+            if(email==""){
+                message += "Email must be filled out.\n";
+            }else if(!email.includes("@")){
+                message += "Invalid email.\n";
+            }
+
+            if(message != ""){
+                alert(message);
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+
+<form name="myform" onsubmit="return validateForm()">
+    Name: <input type="text" name="name"><br><br>
+    E-mail: <input type="text" name="email"><br><br>
+    <input type="submit" value="submit">
+</form>
+    
+</body>
+</html>

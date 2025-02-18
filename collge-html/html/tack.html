@@ -1,0 +1,134 @@
+//Stack Implementation Using Java Script
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Stack Operations</h2>
+    
+    <!-- Input for the value to be pushed to the stack -->
+    <label for="valueInput">Enter value to push:</label>
+    <input type="text" id="valueInput">
+    <button onclick="pushToStack()">Push</button>
+    <br>
+
+    <!-- Buttons for other stack operations -->
+    <button onclick="popFromStack()">Pop</button>
+    <button onclick="peekStack()">Peek</button>
+    <button onclick="printStack()">Print Stack</button>
+    <button onclick="getStackSize()">Get Size</button>
+
+    <br><br>
+
+    <!-- Area to display the stack status -->
+    <div id="stackOutput"></div>
+
+    
+    
+
+    
+</body>
+    <script>
+        // Stack class definition
+        class Stack {
+            constructor() {
+                this.items = [];
+            }
+
+            push(element) {
+                this.items.push(element);
+                this.display(`Pushed ${element} to the stack.`);
+            }
+
+            pop() {
+                if (this.isEmpty()) {
+                    this.display('Stack is empty!');
+                    return null;
+                }
+                const removedElement = this.items.pop();
+                this.display(`Popped ${removedElement} from the stack.`);
+                return removedElement;
+            }
+
+            peek() {
+                if (this.isEmpty()) {
+                    this.display('Stack is empty!');
+                    return null;
+                }
+                this.display(`Top element is: ${this.items[this.items.length - 1]}`);
+                return this.items[this.items.length - 1];
+            }
+
+            isEmpty() {
+                return this.items.length === 0;
+            }
+
+            size() {
+                this.display(`Stack size is: ${this.items.length}`);
+                return this.items.length;
+            }
+
+            printStack() {
+                if (this.isEmpty()) {
+                    this.display('Stack is empty!');
+                } else {
+                    this.display(`Stack elements are: ${this.items.join(', ')}`);
+                }
+            }
+
+            // Method to display messages in the HTML page
+            display(message) {
+                document.getElementById('stackOutput').innerText = message;
+            }
+        }
+
+        // Create a stack object
+        const stack = new Stack();
+
+        // Function to push a value to the stack
+        function pushToStack() {
+            const value = document.getElementById('valueInput').value;
+            if (value === '') {
+                stack.display('Please enter a value to push!');
+            } else {
+                stack.push(value);
+                document.getElementById('valueInput').value = ''; // Clear the input field
+            }
+        }
+
+        // Function to pop a value from the stack
+        function popFromStack() {
+            stack.pop();
+        }
+
+        // Function to peek at the top value of the stack
+        function peekStack() {
+            stack.peek();
+        }
+
+        // Function to print the stack elements
+        function printStack() {
+            stack.printStack();
+        }
+
+        // Function to get the size of the stack
+        function getStackSize() {
+            stack.size();
+        }
+    </script>
+
+
+</html>
