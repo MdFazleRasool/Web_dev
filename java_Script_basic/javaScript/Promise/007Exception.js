@@ -21,3 +21,14 @@ function caller(){
         console.log(exception);
     }
 }
+
+//  throw exception , it will get rejected 
+const pr  = new Promise( function exec(res, rej) {
+    setTimeout( function pr1CB() {
+        console.log("timer of p1 done ");
+        rej(100);
+    },5000);
+});
+
+const p2=  pr.then(function f(){throw 99;} ,function f(){return 99;} );
+

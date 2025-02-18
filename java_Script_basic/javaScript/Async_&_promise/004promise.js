@@ -22,6 +22,15 @@ function download(url, callback){
     }, 3000);
 }
 
+
+/* 
+download("https://www.example.com",function handledownload(value){
+    console.log("Downloaded data is " , value); 
+});
+
+*/
+
+
 function writeFile(data,fileName,callback){
     console.log("Writing ", data , " to file");
     setTimeout( () => {
