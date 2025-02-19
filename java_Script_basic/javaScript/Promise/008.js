@@ -17,7 +17,7 @@ download("https://www.example.com")
     })
 */
 
-function writeFile(fata , fileName){
+function writeFile(data , fileName){
     return new Promise(function exec(res , rej){
         setTimeout(function b(){
             console.log("Writing to file , " , fileName , "  is done");
@@ -60,13 +60,12 @@ upload("file.txt" , "https://www.example.com")
 
 
 */ 
+
 /*
 
 download --> waiting ffor downloading to complete  --> we execute function f --> f calls write file  ->
 when file writing is done p2 is resolved  --> then g is executed     --> g calls  upload -->when p3 is done
 p3 is resolved  -> then h is executed
-
-
 
 */
 
@@ -141,16 +140,6 @@ const p5 = download("https://www.example.com")
             
         }) // check it by making any  one of the 3 function or all to reject
         console.log("End");
-
-
-
-
-
-/*
- const p4 = p3.then(function UploadFile("file.txt", "https://www.example.com",){
-    
- })
-*/
 
 
 /*
