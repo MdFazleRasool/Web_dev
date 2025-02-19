@@ -15,8 +15,12 @@ function fetchNextElement(arr){
         idx++;
         return {value:newElement, done : false};
     }
-    return next;
+    return {next};
 }
-const autoFetcher = fetchNextElement([1,2,3]); // {next:function}
-console.log();
-console.log(autoFetcher.next());
+const iterator = fetchNextElement([1,2,3]); // {next:function}
+
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
