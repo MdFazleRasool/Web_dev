@@ -121,7 +121,7 @@ const p5 = download("https://www.example.com")
     console.log("End");
 */
 
-    console.log("Start");
+console.log("Start");
 
     const p7 = download("https://www.example.com")
         .then(function handleDownload(value){
@@ -139,7 +139,10 @@ const p5 = download("https://www.example.com")
             console.log("Error Occured" , value);
             
         }) // check it by making any  one of the 3 function or all to reject
-        console.log("End");
+
+console.log("End");
+console.log("hi");
+
 
 
 /*

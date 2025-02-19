@@ -17,6 +17,15 @@ function fetchNextElement(arr){
 //fetchNextElement(arr) => 4
 //fetchNextElement(arr) => 5
 //fetchNextElement(arr) => undefined
+const autoFetcher = fetchNextElement([1,2,3]);
+console.log();
+console.log(autoFetcher());
+console.log(autoFetcher());
+for(let i =0;i< 1000000000; i++){}
+console.log(autoFetcher());
+
+
+
 
 
 
