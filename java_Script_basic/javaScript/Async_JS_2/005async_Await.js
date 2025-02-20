@@ -57,8 +57,7 @@ const AsyncAwait = exec();
 
 
 
-
-
+AsyncAwait.then((v) => console.log("Exec. then() called"));
 
 
 
