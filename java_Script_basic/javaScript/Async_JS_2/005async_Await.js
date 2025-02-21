@@ -52,8 +52,6 @@ function upload(fileName , url ){
             console.log("Somethin went wrong ");
             
         }
-    
-    
     }
 
 //004promise.js mai jo code hum log manually likh rahe the async await khud baa khud wo kam kar dega 
