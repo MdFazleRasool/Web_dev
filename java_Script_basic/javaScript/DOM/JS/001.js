@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded",() =>{
     loadTodos();
 });
 //localStorage.setItem("todos",["todo 1", "todo 2"]);
-*/ 
+
 
 document.addEventListener("DOMContentLoaded",() =>{
     
@@ -44,5 +44,18 @@ document.addEventListener("DOMContentLoaded",() =>{
     loadTodos();
 });
 
-
+*/ 
+document.addEventListener("DOMContentLoaded",() =>{
+    
+    const todoInput=document.getElementById("todoInput");
+    
+    todoInput.addEventListener("change" , (event) =>{  
+        const todoText = event.target.value;
+        event.target.value=todoText.trim();
+        console.log(event.target.value);
+        
+      
+    })
+    loadTodos();
+});
 console.log("END");
