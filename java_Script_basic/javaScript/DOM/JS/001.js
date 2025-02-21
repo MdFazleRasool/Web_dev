@@ -19,6 +19,8 @@ function loadTodos(){
         of a user action (such as typing in a textbox or checking a checkbox).
 
 */ 
+
+/*
 document.addEventListener("DOMContentLoaded",() =>{
     
     const todoInput=document.getElementById("todoInput");
@@ -29,4 +31,18 @@ document.addEventListener("DOMContentLoaded",() =>{
     loadTodos();
 });
 //localStorage.setItem("todos",["todo 1", "todo 2"]);
+*/ 
+
+document.addEventListener("DOMContentLoaded",() =>{
+    
+    const todoInput=document.getElementById("todoInput");
+    todoInput.addEventListener("change" , (event) =>{  
+        
+        console.log("Something changed",event.target);
+        console.log("Something changed",event.target.value);
+    })
+    loadTodos();
+});
+
+
 console.log("END");
