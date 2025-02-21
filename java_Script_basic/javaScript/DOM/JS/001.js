@@ -2,9 +2,9 @@ console.log("------ TODOS -----");
 
 function loadTodos(){
     // this function will load Todos from the browser
-    const todos = JSON.parse(localStorage.getItem("todos") ) || [] ; // Short Circuiting (if 1st value falsy then return 2nd object always) , if both true return 1st always
+    const todos = JSON.parse(localStorage.getItem("todos") ) || {"todoList" : []};  // Short Circuiting (if 1st value falsy then return 2nd object always) , if both true return 1st always
     console.log(todos);
-    
+    return todos;
 }
 
 /*  Chnage Event :- 
@@ -25,7 +25,7 @@ function loadTodos(){
 document.addEventListener("DOMContentLoaded",() =>{
     
     const todoInput=document.getElementById("todoInput");
-    todoInput.addEventListener("change" , () =>{  // input or change -  run and check difference
+    //todoInput.addEventListener("change" , () =>{  // input or change -  run and check difference
         //this call back method is fired  everytime there is a  change in the input tag
         // console.log("Something changed",todoInput.value);
     })
@@ -34,15 +34,16 @@ document.addEventListener("DOMContentLoaded",() =>{
 
 */
 
+
 //localStorage.setItem("todos",["todo 1", "todo 2"]);
 
-// m-2
 
+// m-2
 /*
 document.addEventListener("DOMContentLoaded",() =>{
     
     const todoInput=document.getElementById("todoInput");
-    todoInput.addEventListener("change" , (event) =>{  
+    //todoInput.addEventListener("change" , (event) =>{  
         
         console.log("Something changed",event.target);
         console.log("Something changed",event.target.value);
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded",() =>{
 
 */
 
+
 // m-3
 
 /*
@@ -59,7 +61,7 @@ document.addEventListener("DOMContentLoaded",() =>{
     
     const todoInput=document.getElementById("todoInput");
     
-    todoInput.addEventListener("change" , (event) =>{  
+    //todoInput.addEventListener("change" , (event) =>{  
         const todoText = event.target.value;
         event.target.value=todoText.trim();
         console.log(event.target.value);
@@ -71,6 +73,61 @@ document.addEventListener("DOMContentLoaded",() =>{
 
 */ 
 
+
+
 // m-4
+
+
+function addTodoToLocalStorage(todoText){
+    const todos = loadTodos();
+    todos.todoList.push(todoText);
+    localStorage.setItem("todos" ,JSON.stringify(todos));
+}
+
+function appendTodoInHtml(todoText){
+    const todoList = document.getElementById("todoList");
+    const todo = document.createElement("li");
+    todo.textContent=todoText;
+    todoList.appendChild(todo);
+
+}
+
+document.addEventListener("DOMContentLoaded",() =>{
+    
+    const todoInput=document.getElementById("todoInput");
+   
+    const submitButton = document.getElementById("addTodo");
+    
+    const todoList = document.getElementById("todoList");
+
+
+
+    submitButton.addEventListener("click",(event) =>{
+        const todoText = todoInput.value.trim();
+        if(todoText === ' '){
+            alert("please write something for the todo")
+        }else{
+            addTodoToLocalStorage(todoText);
+            appendTodoInHtml(todoText);
+            todoInput.value='';
+        }
+    })
+
+    todoInput.addEventListener("change" , (event) =>{  
+        const todoText = event.target.value;
+        event.target.value=todoText.trim();
+        console.log(event.target.value);
+        
+      
+    })
+
+
+    const todos = loadTodos();
+    todos.todoList.forEach(todo => {
+        const newTodoItem = document.createElement("li");
+        newTodoItem.textContent=todo;
+        todoList.appendChild(newTodoItem);
+    })
+});
 
 console.log("END");

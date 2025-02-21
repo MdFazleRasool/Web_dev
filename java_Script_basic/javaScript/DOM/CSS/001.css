@@ -36,3 +36,20 @@ h1{
     color: white;
     cursor: pointer;
  }
+
+ #todoList{
+    list-style-type:none;
+    padding: 0px;
+ }
+
+ #todoList > li{
+    padding: 10px;
+    border-bottom: 1px solid #efb7b7;
+ }
+
+ #todoList > li:hover{
+    background-color: rgb(176, 207, 234);
+ }
+ #todoList > li:last-child{
+    border-bottom: none;
+ }
