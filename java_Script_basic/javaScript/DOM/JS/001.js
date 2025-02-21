@@ -20,6 +20,7 @@ function loadTodos(){
 
 */ 
 
+// m-1
 /*
 document.addEventListener("DOMContentLoaded",() =>{
     
@@ -30,9 +31,14 @@ document.addEventListener("DOMContentLoaded",() =>{
     })
     loadTodos();
 });
+
+*/
+
 //localStorage.setItem("todos",["todo 1", "todo 2"]);
 
+// m-2
 
+/*
 document.addEventListener("DOMContentLoaded",() =>{
     
     const todoInput=document.getElementById("todoInput");
@@ -44,7 +50,11 @@ document.addEventListener("DOMContentLoaded",() =>{
     loadTodos();
 });
 
-*/ 
+*/
+
+// m-3
+
+/*
 document.addEventListener("DOMContentLoaded",() =>{
     
     const todoInput=document.getElementById("todoInput");
@@ -58,4 +68,9 @@ document.addEventListener("DOMContentLoaded",() =>{
     })
     loadTodos();
 });
+
+*/ 
+
+// m-4
+
 console.log("END");
