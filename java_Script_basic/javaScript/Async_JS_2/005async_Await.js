@@ -35,27 +35,29 @@ function upload(fileName , url ){
 }
 
     async function exec(){
-        console.log("Starting execution");
+        try {
+            console.log("Starting execution");
     
-        const downloadedData= await download("https://www.example.com");
-        console.log("Data downloaded is  " , downloadedData);
-    
-        const fileResponse = await writeFile(downloadedData,"example.txt");
-        console.log("File write status " , fileResponse);
+            const downloadedData= await download("https://www.example.com");
+            console.log("Data downloaded is  " , downloadedData);
         
-        const uploadStatus = await upload("example.txt","https;//www.example.com");
-        console.log("Upload status " , uploadStatus);
+            const fileResponse = await writeFile(downloadedData,"example.txt");
+            console.log("File write status " , fileResponse);
+            
+            const uploadStatus = await upload("example.txt","https;//www.example.com");
+            console.log("Upload status " , uploadStatus);
 
         return uploadStatus ;
+        } catch (error) {
+            console.log("Somethin went wrong ");
+            
+        }
     
     
     }
 
-const AsyncAwait = exec();
-
 //004promise.js mai jo code hum log manually likh rahe the async await khud baa khud wo kam kar dega 
-
-
+const AsyncAwait = exec();
 
 AsyncAwait.then((v) => console.log("Exec. then() called"));
 
