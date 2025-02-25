@@ -75,12 +75,20 @@ document.addEventListener('DOMContentLoaded',function(){
         gameArena.appendChild(foodElement);
     }
 
+    function gameLoop(){
+        
+        setInterval(() =>{
+            UpdateSnake();
+            drawFoodAndSnake();
+        },200)
+    }
+
     function runGame(){
         if(!gameStarted){
             gameStarted=true;
             document.addEventListener('keydown',changeDirection);
-            drawFoodAndSnake();
-            //gameLoop(); TODO : IMplement game Loop
+            
+            gameLoop();  // /TODO : IMplement game Loop
         }
     }
 
