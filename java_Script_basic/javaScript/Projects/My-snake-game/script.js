@@ -9,14 +9,16 @@ document.addEventListener('DOMContentLoaded',function(){
     let snake = [{x:160 , y:200} , {x:140,y:200},{x:120,y:200}] // [head, body , ... ,body,tail]
     let dx = cellSize; //+20
     let dy =  0;
-
     let intervalId;
+    let gameSpeed=200;
 
     function moveFood(){
         let newX , newY;
         do {
-            
-        } while (); 
+            newX = Math.floor(Math.random() * 30) * cellSize ;
+            newY = Math.floor(Math.random() * 30) * cellSize ;
+        } while (snake.some(snakeCell => snakeCell.x === newX && snakeCell.y === newY)); 
+        food = { x: newX , y: newY};
     }
 
     function UpdateSnake(){
@@ -26,7 +28,12 @@ document.addEventListener('DOMContentLoaded',function(){
 
          if(newHead.x == food.x && newHead.y === food.y){
             score+=10;
-            // /Todo :- move food
+            moveFood();
+            if(gameSpeed > 50){
+                clearInterval(intervalId);
+                gameSpeed-=5;
+                gameLoop();
+            }
          }
          else{
             snake.pop(); // remove tail
@@ -34,26 +41,26 @@ document.addEventListener('DOMContentLoaded',function(){
     
     }   
 
-    function changeDirection(e){
+    function changeDirection(e){    
         console.log("key pressed", e);
         const isGoingDown = dy === cellSize;
         const isGoingUp = dy === -cellSize;
         const isGoingRight = dx === cellSize;
         const isGoingLeft = dx === -cellSize;
                                     
-        if(e.key === 'ArrowUp' && dy === -cellSize && !isGoingDown){
+        if(e.key === 'ArrowUp'  && !isGoingDown){ //&& dy === -cellSize
             dx=0;
             dy=-cellSize;
         }
-        else if(e.key === 'ArrowDown' && dy === cellSize && !isGoingUp ){
+        else if(e.key === 'ArrowDown' && !isGoingUp ){ // && dy === cellSize 
             dx=0;
             dy=cellSize;
         }
-        else if(e.key === 'Arrowleft'  && dx === -cellSize && !isGoingRight){
+        else if(e.key === 'ArrowLeft'   && !isGoingRight){  //&& dx === -cellSize
             dx=-cellSize;
             dy=0;
         }
-        else if(e.key === 'ArrowRight' && dx === -cellSize&& !isGoingLeft){
+        else if(e.key === 'ArrowRight'  && !isGoingLeft){ //&& dx=== -cellSize
             dx=cellSize;
             dy=0;
         }
@@ -93,7 +100,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
         // wall collision checks
         const hitLeftWall = snake[0].x < 0; // sanke head
-        const hitRighttWall = snake[0].x > arenaSize - cellSize;
+        const hitRighttWall = snake[0].x > arenaSize - cellSize ;
         const hitTopWall = snake[0].y < 0;
         const hitBottomWall = snake[0].y > arenaSize - cellSize;
         return hitLeftWall | hitRighttWall | hitBottomWall | hitTopWall;
@@ -105,11 +112,13 @@ document.addEventListener('DOMContentLoaded',function(){
             if(isGameOver()){
                 clearInterval(intervalId);
                 gameStarted=false;
+                alert('Game Over' + '\n Your Score ' + score);
                 return;
             }
             UpdateSnake();
             drawFoodAndSnake();
-        },200)
+            drawScoreBoard();
+        },gameSpeed)
     }
 
     function runGame(){
@@ -119,6 +128,11 @@ document.addEventListener('DOMContentLoaded',function(){
             
             gameLoop();  // /TODO : IMplement game Loop
         }
+    }
+
+    function drawScoreBoard(){
+        const scoreBoard = document.getElementById('score-board');
+        scoreBoard.textContent= `Score : ${score}`;
     }
 
     function initiateGame(){
