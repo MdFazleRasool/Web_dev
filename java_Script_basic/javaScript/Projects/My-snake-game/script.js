@@ -10,6 +10,14 @@ document.addEventListener('DOMContentLoaded',function(){
     let dx = cellSize; //+20
     let dy =  0;
 
+    let intervalId;
+
+    function moveFood(){
+        let newX , newY;
+        do {
+            
+        } while (); 
+    }
 
     function UpdateSnake(){
         const newHead= {x:snake[0].x + dx , y :snake[0].y + dy}
@@ -18,7 +26,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
          if(newHead.x == food.x && newHead.y === food.y){
             score+=10;
-            // Do :- move food
+            // /Todo :- move food
          }
          else{
             snake.pop(); // remove tail
@@ -75,9 +83,30 @@ document.addEventListener('DOMContentLoaded',function(){
         gameArena.appendChild(foodElement);
     }
 
+    function isGameOver(){
+        // Snake collision check 
+
+        for(let i =1;i<snake.length;i++){
+            if(snake[0].x === snake[i].x && snake[0].y === snake[i].y)
+                return true;
+        }
+
+        // wall collision checks
+        const hitLeftWall = snake[0].x < 0; // sanke head
+        const hitRighttWall = snake[0].x > arenaSize - cellSize;
+        const hitTopWall = snake[0].y < 0;
+        const hitBottomWall = snake[0].y > arenaSize - cellSize;
+        return hitLeftWall | hitRighttWall | hitBottomWall | hitTopWall;
+    }
+
     function gameLoop(){
         
-        setInterval(() =>{
+        intervalId=setInterval(() =>{
+            if(isGameOver()){
+                clearInterval(intervalId);
+                gameStarted=false;
+                return;
+            }
             UpdateSnake();
             drawFoodAndSnake();
         },200)
